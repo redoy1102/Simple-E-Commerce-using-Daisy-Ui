@@ -34,6 +34,8 @@
                         'star-color': '#E77C40',
                         'carousel-bg-color': 'rgba(231, 111, 81, 0.1)',
                         'card-title-color': '#000000',
+                        'card-title-color-two': '#18191F',
+                        'card-p-color': '#6C6C6C',
                     }
                 }
             }
@@ -98,7 +100,7 @@
 </style>
 
 <body>
-    <header class="md:container md:mx-auto">
+    <header class="lg:px-36">
         <nav class="my-5 lg:my-12">
             <div class="navbar bg-base-100">
                 <div class="flex-1">
@@ -220,20 +222,70 @@
         </div>
     </header>
 
-    <main class="md:container md:mx-auto">
-        <div class="feature-bike my-14 lg:my-40">
-            <h1 class="poppins-semi-bold text-xl md:text-2xl lg:text-5xl text-center">Featured Bikes In This Year</h1>
-            <p class="poppins-semi-bold text-btn-bg-color text-base mb-1 text-center">Best bike collection</p>
-            <div class="hr-rule grid justify-center items-center">
-                <hr class="border-1 border-btn-bg-color mb-11 w-14">
+    <main class="lg:px-36">
+        <!-- featured bike  -->
+        <section>
+            <div class="feature-bike my-14 lg:my-40">
+                <h1 class="poppins-semi-bold text-xl md:text-2xl lg:text-5xl text-center">Featured Bikes In This Year
+                </h1>
+                <p class="poppins-semi-bold text-btn-bg-color text-base mb-1 text-center">Best bike collection</p>
+                <div class="hr-rule grid justify-center items-center">
+                    <hr class="border-1 border-btn-bg-color mb-11 w-14">
+                </div>
+                <div
+                    class="flex flex-col gap-5 justify-between items-center md:flex-row md:justify-between md:items-center">
+                    <div class=""><img src="./images/others/latest1.png" alt=""></div>
+                    <div class=""><img src="./images/others/latest2.png" alt=""></div>
+                    <div class=""><img src="./images/others/latest3.png" alt=""></div>
+                </div>
             </div>
-            <div
-                class="flex flex-col gap-5 justify-between items-center md:flex-row md:justify-between md:items-center ">
-                <div class=""><img src="./images/others/latest1.png" alt=""></div>
-                <div class=""><img src="./images/others/latest2.png" alt=""></div>
-                <div class=""><img src="./images/others/latest3.png" alt=""></div>
+        </section>
+
+        <!-- latest news  -->
+        <section class="mb-32">
+            <h1 class="poppins-semi-bold text-xl mb-6 md:text-2xl lg:text-5xl text-center lg:mb-12">Latest News
+            </h1>
+            <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div class="card bg-base-100 drop-shadow-lg">
+                    <figure class="pt-5">
+                        <img src="./images/others/latest1.png" alt="Bike" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title poppins-semi-bold text-2xl text-card-title-color-two">Ducati XDIAVEL S-73</h2>
+                        <p class="text-card-p-color poppins-regular text-base text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+                        <div class="card-actions">
+                            <button class="btn text-base poppins-bold text-white bg-btn-bg-color">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card bg-base-100 drop-shadow-lg">
+                    <figure class="pt-5">
+                        <img src="./images/others/latest2.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title poppins-semi-bold text-2xl text-card-title-color-two">Motorcycles & Scooters</h2>
+                        <p class="text-card-p-color poppins-regular text-base text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+                        <div class="card-actions">
+                            <button class="btn text-base poppins-bold text-white bg-btn-bg-color">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-100 drop-shadow-lg">
+                    <figure class="pt-5">
+                        <img src="./images/others/latest3.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title poppins-semi-bold text-2xl text-card-title-color-two">2021 Honda CBR500R</h2>
+                        <p class="text-card-p-color poppins-regular text-base text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+                        <div class="card-actions">
+                            <button class="btn text-base poppins-bold text-white bg-btn-bg-color">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
