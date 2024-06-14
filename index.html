@@ -12,10 +12,202 @@
     <!-- CDN of Daisy Ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google poppins font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- inter google font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- manrope google font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'btn-bg-color': '#E76F51',
+                        'star-color': '#E77C40',
+                        'carousel-bg-color': 'rgba(231, 111, 81, 0.1)',
+                        'card-title-color': '#000000',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
+<style>
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .poppins-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .inter-regular {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "slnt" 0;
+    }
+
+    .inter-medium {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings: "slnt" 0;
+    }
+
+    .manrope-regular {
+        font-family: "Manrope", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .manrope-medium {
+        font-family: "Manrope", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+</style>
+
 <body>
-    <button class="btn btn-primary">Hey</button>
+    <header class="md:container md:mx-auto">
+        <nav class="my-5 lg:my-12">
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
+                    <div class="dropdown">
+                        <!-- icon  -->
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <!-- this unordered list will come after clicking the icon  -->
+                        <ul tabindex="0"
+                            class="menu text-base poppins-medium menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li>Home</li>
+                            <li>Shop</li>
+                            <li>News</li>
+                            <li>Contact</li>
+                            <a class="btn btn-error text-xl poppins-bold lg:hidden text-white">Login</a>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-3xl poppins-bold">Bike Dekho</a>
+                </div>
+
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu text-base poppins-medium menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>News</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                    <a class="btn btn-error text-xl poppins-bold text-white bg-btn-bg-color">Login</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- carousel  -->
+        <div class="carousel w-full lg:h-[550px] bg-carousel-bg-color rounded-lg shadow-lg">
+            <div id="slide1" class="carousel-item relative w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 justify-evenly items-center gap-4 p-6 lg:p-24">
+                    <div class="lg:col-span-6">
+                        <h1 class="card-title-color poppins-bold text-xl lg:text-6xl mb-5">Ride-on R15 V4 with Smile</h1>
+                        <p class="card-title-color poppins-regular text-base mb-4 lg:mb-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <button class="btn text-base poppins-bold text-white bg-btn-bg-color">Purchase</button>
+                    </div>
+                    <div class="lg:col-span-6">
+                        <img src="./images/slider/bike1.png" class="w-full" />
+                    </div>
+                </div>
+                
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 mt-3">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+
+            <!-- <div id="slide2" class="carousel-item relative w-full">
+                <div class="grid grid-cols-12 justify-evenly items-center gap-4 p-24">
+                    <div class="col-span-6">
+                        <h1 class="card-title-color poppins-bold text-6xl mb-5">Ride-on R15 V4 with Smile</h1>
+                        <p class="card-title-color poppins-regular text-base mb-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <a class="btn btn-error text-xl poppins-bold text-white bg-btn-bg-color">Purchase</a>
+                    </div>
+                    <div class="col-span-6">
+                        <img src="./images/slider/bike2.png" class="w-full" />
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <div class="grid grid-cols-12 justify-evenly items-center gap-4 p-24">
+                    <div class="col-span-6">
+                        <h1 class="card-title-color poppins-bold text-6xl mb-5">Ride-on R15 V4 with Smile</h1>
+                        <p class="card-title-color poppins-regular text-base mb-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <a class="btn btn-error text-xl poppins-bold text-white bg-btn-bg-color">Purchase</a>
+                    </div>
+                    <div class="col-span-6">
+                        <img src="./images/slider/bike3.png" class="w-full" />
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+                <div class="grid grid-cols-12 justify-evenly items-center gap-4 p-24">
+                    <div class="col-span-6">
+                        <h1 class="card-title-color poppins-bold text-6xl mb-5">Ride-on R15 V4 with Smile</h1>
+                        <p class="card-title-color poppins-regular text-base mb-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <a class="btn btn-error text-xl poppins-bold text-white bg-btn-bg-color">Purchase</a>
+                    </div>
+                    <div class="col-span-6">
+                        <img src="./images/slider/bike4.png" class="w-full" />
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div> -->
+        </div>
+    </header>
+
+    <main class="md:container md:mx-auto">
+
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 
 </html>
